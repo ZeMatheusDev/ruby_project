@@ -3,7 +3,6 @@ require 'tiny_tds'
 class Connection
   def self.connect
     begin
-      # Configurações de conexão com o banco de dados SQL Server
       config = {
         :host => 'localhost',
         :username => 'sa',
@@ -11,7 +10,6 @@ class Connection
         :database => 'ruby'
       }
 
-      # Estabelece a conexão com o banco de dados
       client = TinyTds::Client.new(config)
       puts "Conexão estabelecida com sucesso!"
       return client
@@ -22,7 +20,6 @@ class Connection
   end
 
   def self.disconnect(client)
-    # Fecha a conexão com o banco de dados
     client.close if client
     puts "Conexão fechada."
   end

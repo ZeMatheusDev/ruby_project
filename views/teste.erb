@@ -7,12 +7,9 @@
 </head>
 <body>
     <h1>Lista de Usuários</h1>
-    <% dados.each do |usuario| %>
+    <% dados.each do |user| %>
         <div>
-            <p>ID: <%= usuario[:id] %></p>
-            <p>Login: <%= usuario[:login] %></p>
-            <p>Senha: <%= usuario[:senha] %></p>
-            <p>Email: <%= usuario[:email] %></p>
+            <p>Login: <%= user.login %></p>
         </div>
         <hr>
     <% end %>
